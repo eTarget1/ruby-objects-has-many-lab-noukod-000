@@ -1,30 +1,16 @@
-
 class Post
-  attr_accessor :title, :author
 
-  @@all = []
-  @@all_by_title = []
+ attr_accessor :title, :author
+ @@all = []
+ def initialize(title)
+   @title = title
+   @@all << self
+ end
+ def self.all
+   @@all
+ end
 
-  def initialize(title, author=nil)
-    @title = title
-    @author = author
-    @@all << self
-    @@all_by_title << self
-  end
-
-  def author_name
-    if self.author
-      self.author.name
-    else
-      "Author not found!"
-    end
-  end
-
-  def self.all
-    @@all
-  end
-
-  def self.all_by_title
-    @@all_by_title
-  end
+ def author_name
+    author.name if author
+ end
 end
