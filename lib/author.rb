@@ -46,7 +46,7 @@ class Author
 
   def add_song_by_name
     song = Song.new(name)
-    
+
   end
 
 end
