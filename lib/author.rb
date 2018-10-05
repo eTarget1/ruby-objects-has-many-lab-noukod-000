@@ -39,10 +39,14 @@ class Author
   def self.all
     @@all
   end
-  
+
   def add_song
     song.artist = self
   end
 
+  def add_song_by_name
+    song = Song.new(name)
+    
+  end
 
 end
