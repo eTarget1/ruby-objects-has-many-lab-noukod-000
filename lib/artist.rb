@@ -27,10 +27,11 @@ class Artist
 
   def songs
     #@songs
-    song.all.select { |song| song.artist ==name|  }
+    song.all.select { |song| song.artist ==name}
   end
 
   def self.song_count
-    @@song_count
+    #@@song_count
+    Song.all.count
   end
 end
