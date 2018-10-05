@@ -12,14 +12,14 @@ class Author
   def posts
     Post.all.select { |post| post.author == self }
   end
-  
+
   def posts_by_title
     authors_posts = []
     Post.all_by_title.each do |post|
-      if post.author == self 
-        authors_posts << post.title 
-      end  
+      if post.author == self
+        authors_posts << post.title
+      end
     end
     authors_posts
-  end 
+  end
 end
